@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+:root {
+  --clr-primary-v-dark-magneta: hsl(300, 43%, 22%);
+  --clr-primary-soft-pink: hsl(333, 80%, 67%);
+
+  --clr-neutral-dark-gayish-magneta: hsl(303, 10%, 53%);
+  --clr-neutral-light-grayish-magneta: hsl(300, 24%, 96%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  --fw-regular: 400;
+  --fw-semibold: 500;
+  --fw-bold: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--clr-neutral-light-grayish-magneta);
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+  padding-block: 3rem;
+  display: grid;
+  gap: 5rem;
+}
+
+.container section:nth-child(1) {
+  display: grid;
+  gap: 3rem;
+}
+
+.container .info {
+  text-align: center;
+  gap: 5rem;
+}
+
+.container .info h1 {
+  font-size: 2.3rem;
+  color: var(--clr-primary-v-dark-magneta);
+  font-weight: var(--fw-bold);
+  line-height: 0.9;
+}
+
+.container .info p {
+  color: var(--clr-neutral-dark-gayish-magneta);
+  font-weight: var(--fw-semibold);
+}
+
+.container .ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  color: var(--clr-primary-v-dark-magneta);
+  font-weight: var(--fw-bold);
+}
+
+.container .ratings .stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.container .reviews {
+  display: grid;
+  gap: 2rem;
+}
+
+.container .reviews .user-review {
+  background-color: var(--clr-primary-v-dark-magneta);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.container .reviews .user-review .user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-weight: var(--fw-bold);
+}
+
+.container .reviews .user-review .user-info img {
+  border-radius: 100%;
+  width: 40px;
+}
+
+.container .reviews .user-review .user-info p {
+  margin: 0;
+}
+
+.container .reviews .user-review .user-info p:last-child {
+  color: var(--clr-neutral-dark-gayish-magneta);
+  font-weight: var(--fw-regular);
+}
+
+.container .reviews .user-review {
+  color: var(--clr-neutral-white);
+}
+
+@media (min-width: 900px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  .container section:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container .info {
+    padding: 1rem;
+    text-align: start;
+  }
+
+  .container .info h1 {
+    margin: 0;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .container .ratings {
+    align-self: center;
+  }
+
+  .container .ratings p {
+    margin: 0;
+  }
+
+  .container .ratings .rate-sites {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .container .ratings > :nth-child(2) {
+    margin-left: 7rem;
+  }
+
+  .container .ratings > :nth-child(3) {
+    margin-left: 10rem;
+  }
+
+  .container .reviews {
+    display: flex;
+    align-items: center;
+  }
+
+  .container .reviews > :nth-child(2) {
+    margin-top: 3rem;
+  }
+
+  .container .reviews > :nth-child(3) {
+    margin-top: 6rem;
+  }
+}
