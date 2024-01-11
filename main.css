@@ -180,6 +180,10 @@ body {
     place-items: center;
   }
 
+  .container {
+    gap: 2rem;
+  }
+
   .container section:nth-child(1) {
     display: grid;
     grid-template-columns: 1fr 1fr;
